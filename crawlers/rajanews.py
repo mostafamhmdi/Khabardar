@@ -133,6 +133,7 @@ def crawl_rajanews():
     # ۲. ورود به اخبار
     counter = 1
     for url in unique_links:
+        #print(url)
         print(f"[{counter}/{len(unique_links)}] پردازش: {urllib.parse.unquote(url.split('/')[-1][:30])}...")
 
         art_resp = get_page_with_retry(url)
